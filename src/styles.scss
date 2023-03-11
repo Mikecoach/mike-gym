@@ -21,6 +21,10 @@ $mike-gym-theme: mat.define-light-theme((color: (primary: $mike-gym-primary,
 
 @include mat.all-component-themes($mike-gym-theme);
 
+*{
+ color: white !important;
+}
+
 html,
 body {
   height: 100%;
