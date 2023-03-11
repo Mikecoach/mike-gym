@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mike-gym",
+            "outputPath": "docs/mike-gym",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
