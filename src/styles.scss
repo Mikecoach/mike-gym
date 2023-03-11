@@ -1,6 +1,6 @@
-
 @use '@angular/material' as mat;
 @include mat.core();
+@import 'src/assets/scss/colors.scss';
 
 /*The mat-palette function accepts five parameters: 
   1 color palette, 
@@ -14,15 +14,20 @@ $mike-gym-accent: mat.define-palette(mat.$gray-palette, 200, 200, 200);
 
 $mike-gym-warn: mat.define-palette(mat.$red-palette, 900, 900, 900);
 
-$mike-gym-theme: mat.define-light-theme((
-  color: (
-    primary: $mike-gym-primary,
-    accent: $mike-gym-accent,
-    warn: $mike-gym-warn,
-  )
-));
+$mike-gym-theme: mat.define-light-theme((color: (primary: $mike-gym-primary,
+        accent: $mike-gym-accent,
+        warn: $mike-gym-warn,
+      )));
 
 @include mat.all-component-themes($mike-gym-theme);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: $dark-primary !important;
+}
