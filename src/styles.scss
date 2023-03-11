@@ -1,6 +1,8 @@
 @use '@angular/material' as mat;
 @include mat.core();
 @import 'src/assets/scss/colors.scss';
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 
 /*The mat-palette function accepts five parameters: 
   1 color palette, 
@@ -23,6 +25,11 @@ $mike-gym-theme: mat.define-light-theme((color: (primary: $mike-gym-primary,
 
 *{
  color: white !important;
+ font-family: 'Poppins' !important;
+}
+
+h1,h2,h3,h4,h5{
+ font-family: 'Righteous' !important;
 }
 
 html,
