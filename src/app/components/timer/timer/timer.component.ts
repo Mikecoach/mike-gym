@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerComponent implements OnInit {
 
+  //Labels
   step: string = "";
   time: number = 0;
+
+  //Time
   prepare: number = 5;
   work: number = 3;
   rest: number = 5;
@@ -16,6 +19,9 @@ export class TimerComponent implements OnInit {
   sets: number = 2;
   restBetweenSets: number = 6;
   coolDown: number = 20;
+
+  //Percentages
+  setsPercentages:number=0;
 
   sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -27,10 +33,13 @@ export class TimerComponent implements OnInit {
    * Start job
    */
   async start() {
+    let setsPercentage:number = 100/this.sets;
+
     //Prepare
     await this.timer("Preparación", this.prepare);
     //Sets
     for (let index = 1; index <= this.sets; index++) {
+      this.setsPercentages+=setsPercentage;
       //Cicles
       for (let index = 1; index <= this.cycles; index++) {
         //Work
