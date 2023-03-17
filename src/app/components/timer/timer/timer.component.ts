@@ -21,6 +21,7 @@ export class TimerComponent implements OnInit {
   coolDown: number = 20;
 
   //Percentages
+  cyclesPercentages:number=0;
   setsPercentages:number=0;
 
   sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -33,6 +34,7 @@ export class TimerComponent implements OnInit {
    * Start job
    */
   async start() {
+    let cyclePercentage:number = 100/(this.cycles*this.sets);
     let setsPercentage:number = 100/this.sets;
 
     //Prepare
@@ -42,6 +44,7 @@ export class TimerComponent implements OnInit {
       this.setsPercentages+=setsPercentage;
       //Cicles
       for (let index = 1; index <= this.cycles; index++) {
+        this.cyclesPercentages+=cyclePercentage;
         //Work
         await this.timer("Ciclo " + index + " - Trabajo", this.work);
         //Rest

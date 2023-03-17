@@ -3,6 +3,8 @@
         <h1>{{step}}</h1>
         <h3>{{time}}</h3>
 
+        <p>Ciclos</p>
+        <mat-progress-bar mode="determinate" [value]="cyclesPercentages"></mat-progress-bar>
         <p>Sets</p>
         <mat-progress-bar mode="determinate" [value]="setsPercentages"></mat-progress-bar>
     </div>
