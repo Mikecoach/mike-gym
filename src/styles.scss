@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @include mat.core();
+@import 'src/assets/scss/input.scss';
 @import 'src/assets/scss/title.scss';
 @import 'src/assets/scss/button.scss';
 @import 'src/assets/scss/colors.scss';
@@ -47,6 +48,10 @@ body {
   padding-bottom: 20px;
 }
 
-mat-form-field, button {
+button {
   width: 100%;
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+  font-family: "Font Awesome 6 Free" !important;
 }
