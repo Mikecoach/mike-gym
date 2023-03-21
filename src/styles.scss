@@ -1,5 +1,7 @@
 @use '@angular/material' as mat;
 @include mat.core();
+@import 'src/assets/scss/title.scss';
+@import 'src/assets/scss/button.scss';
 @import 'src/assets/scss/colors.scss';
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
@@ -23,13 +25,9 @@ $mike-gym-theme: mat.define-light-theme((color: (primary: $mike-gym-primary,
 
 @include mat.all-component-themes($mike-gym-theme);
 
-*{
- color: white !important;
- font-family: 'Poppins' !important;
-}
-
-h1,h2,h3,h4,h5{
- font-family: 'Righteous' !important;
+* {
+  color: white !important;
+  font-family: 'Poppins' !important;
 }
 
 html,
@@ -41,4 +39,14 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: $dark-primary !important;
+}
+
+.card {
+  background: $blue-primary !important;
+  margin: 20px 0px;
+  padding-bottom: 20px;
+}
+
+mat-form-field, button {
+  width: 100%;
 }

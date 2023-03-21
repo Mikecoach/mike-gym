@@ -27,7 +27,6 @@ export class TimerComponent implements OnInit {
   sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
   ngOnInit(): void {
-    this.start();
   }
 
   /**

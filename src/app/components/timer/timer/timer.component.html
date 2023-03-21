@@ -1,11 +1,47 @@
-<div class="row">
-    <div class="col-12">
-        <h1>{{step}}</h1>
-        <h3>{{time}}</h3>
-
-        <p>Ciclos</p>
-        <mat-progress-bar mode="determinate" [value]="cyclesPercentages"></mat-progress-bar>
-        <p>Sets</p>
-        <mat-progress-bar mode="determinate" [value]="setsPercentages"></mat-progress-bar>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-3 card">
+            <h2 class="">Arma tu rutina</h2>
+            <p>Ingresa los parametros de tu rutina de entrenamiento:</p>
+    
+            <mat-form-field appearance="outline">
+                <mat-label>Preparación</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Trabajo</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Descanso</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Ciclos</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Sets</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Descanso entre sets</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Descanso final</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <button mat-flat-button color="primary" (click)="start()">INICIAR</button>
+        </div>
+        <div class="col12 col-md-9">
+            <h1>{{step}}</h1>
+            <h3>{{time}}</h3>
+    
+            <p>Ciclos</p>
+            <mat-progress-bar mode="determinate" [value]="cyclesPercentages"></mat-progress-bar>
+            <p>Sets</p>
+            <mat-progress-bar mode="determinate" [value]="setsPercentages"></mat-progress-bar>
+        </div>
     </div>
 </div>
