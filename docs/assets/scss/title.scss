@@ -1,0 +1,12 @@
+@import 'src/assets/scss/colors.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+  font-family: 'Righteous' !important;
+  border-left: 3px solid $red-primary;
+  padding-left: 10px;
+}
