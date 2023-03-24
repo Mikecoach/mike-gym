@@ -12,35 +12,35 @@
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-dumbbell"></mat-icon>
                     <mat-label>Trabajo</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="work">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-hourglass-half"></mat-icon>
                     <mat-label>Descanso</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="rest">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-arrows-spin"></mat-icon>
                     <mat-label>Ciclos</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="cycles">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-list-check"></mat-icon>
                     <mat-label>Sets</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="sets">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-hourglass-start"></mat-icon>
                     <mat-label>Descanso entre sets</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="restBetweenSets">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-temperature-arrow-down"></mat-icon>
                     <mat-label>Descanso final</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="coolDown">
                 </mat-form-field>
-                <button mat-flat-button color="primary" (click)="start()">INICIAR</button>
             </form>
+            <button mat-flat-button color="primary" (click)="start()">INICIAR</button>
         </div>
         <div class="col12 col-md-9">
             <h1>{{step}}</h1>

@@ -9,7 +9,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class TimerComponent implements OnInit {
 
   timerForm = this.fb.group({
-    prepare: [0, [Validators.required]]
+    prepare: [0, [Validators.required]],
+    work: [0, [Validators.required]],
+    rest: [0, [Validators.required]],
+    cycles: [0, [Validators.required]],
+    sets: [0, [Validators.required]],
+    restBetweenSets: [0, [Validators.required]],
+    coolDown: [0, [Validators.required]],
   });
 
   //Labels
