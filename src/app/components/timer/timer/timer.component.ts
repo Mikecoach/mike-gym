@@ -23,13 +23,13 @@ export class TimerComponent implements OnInit {
   time: number = 0;
 
   //Time
-  prepare: number = 5;
-  work: number = 3;
-  rest: number = 5;
-  cycles: number = 2;
-  sets: number = 2;
-  restBetweenSets: number = 6;
-  coolDown: number = 20;
+  prepare: number = 0;
+  work: number = 0;
+  rest: number = 0;
+  cycles: number = 0;
+  sets: number = 0;
+  restBetweenSets: number = 0;
+  coolDown: number = 0;
 
   //Percentages
   cyclesPercentages:number=0;
@@ -48,6 +48,14 @@ export class TimerComponent implements OnInit {
    * Start job
    */
   async start() {
+    this.prepare = this.timerForm.controls['prepare'].value; 
+    this.work = this.timerForm.controls['work'].value;
+    this.rest = this.timerForm.controls['rest'].value;
+    this.cycles = this.timerForm.controls['cycles'].value;
+    this.sets = this.timerForm.controls['sets'].value;
+    this.restBetweenSets = this.timerForm.controls['restBetweenSets'].value;
+    this.coolDown = this.timerForm.controls['coolDown'].value;
+
     let cyclePercentage:number = 100/(this.cycles*this.sets);
     let setsPercentage:number = 100/this.sets;
 
