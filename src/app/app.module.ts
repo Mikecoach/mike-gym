@@ -9,7 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon'; 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import {MatInputModule} from '@angular/material/input'; 
 
@@ -30,6 +30,7 @@ import {MatInputModule} from '@angular/material/input';
     MatProgressBarModule,
     MatFormFieldModule,
     FormsModule,
+    ReactiveFormsModule,
     MatInputModule
   ],
   providers: [],

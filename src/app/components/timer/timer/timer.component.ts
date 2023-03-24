@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'timer',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timer.component.scss']
 })
 export class TimerComponent implements OnInit {
+
+  timerForm = this.fb.group({
+    prepare: [0, [Validators.required]]
+  });
 
   //Labels
   step: string = "";
@@ -25,6 +30,10 @@ export class TimerComponent implements OnInit {
   setsPercentages:number=0;
 
   sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+  constructor(private fb: FormBuilder) 
+  {
+  }
 
   ngOnInit(): void {
   }
