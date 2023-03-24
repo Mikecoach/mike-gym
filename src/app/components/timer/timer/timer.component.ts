@@ -9,13 +9,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class TimerComponent implements OnInit {
 
   timerForm = this.fb.group({
-    prepare:          [0, [Validators.required, Validators.pattern('[0-9]*')]],
-    work:             [0, [Validators.required, Validators.pattern('[0-9]*')]],
-    rest:             [0, [Validators.required, Validators.pattern('[0-9]*')]],
-    cycles:           [0, [Validators.required, Validators.pattern('[0-9]*')]],
-    sets:             [0, [Validators.required, Validators.pattern('[0-9]*')]],
-    restBetweenSets:  [0, [Validators.required, Validators.pattern('[0-9]*')]],
-    coolDown:         [0, [Validators.required, Validators.pattern('[0-9]*')]],
+    prepare:          [1, [Validators.required, Validators.min(1), Validators.pattern('[0-9]*')]],
+    work:             [1, [Validators.required, Validators.min(1), Validators.pattern('[0-9]*')]],
+    rest:             [1, [Validators.required, Validators.min(1), Validators.pattern('[0-9]*')]],
+    cycles:           [1, [Validators.required, Validators.min(1), Validators.pattern('[0-9]*')]],
+    sets:             [1, [Validators.required, Validators.min(1), Validators.pattern('[0-9]*')]],
+    restBetweenSets:  [1, [Validators.required, Validators.min(1), Validators.pattern('[0-9]*')]],
+    coolDown:         [1, [Validators.required, Validators.min(1), Validators.pattern('[0-9]*')]],
   });
 
   //Labels
