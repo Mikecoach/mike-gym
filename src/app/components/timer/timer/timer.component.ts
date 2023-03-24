@@ -9,13 +9,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class TimerComponent implements OnInit {
 
   timerForm = this.fb.group({
-    prepare: [0, [Validators.required]],
-    work: [0, [Validators.required]],
-    rest: [0, [Validators.required]],
-    cycles: [0, [Validators.required]],
-    sets: [0, [Validators.required]],
-    restBetweenSets: [0, [Validators.required]],
-    coolDown: [0, [Validators.required]],
+    prepare:          [0, [Validators.required, Validators.pattern('[0-9]*')]],
+    work:             [0, [Validators.required, Validators.pattern('[0-9]*')]],
+    rest:             [0, [Validators.required, Validators.pattern('[0-9]*')]],
+    cycles:           [0, [Validators.required, Validators.pattern('[0-9]*')]],
+    sets:             [0, [Validators.required, Validators.pattern('[0-9]*')]],
+    restBetweenSets:  [0, [Validators.required, Validators.pattern('[0-9]*')]],
+    coolDown:         [0, [Validators.required, Validators.pattern('[0-9]*')]],
   });
 
   //Labels
