@@ -40,7 +40,7 @@
                     <input matInput formControlName="coolDown">
                 </mat-form-field>
             </form>
-            <button mat-flat-button color="primary" [disabled]="timerForm.invalid" (click)="start()">INICIAR</button>
+            <button mat-flat-button color="primary" [disabled]="timerForm.invalid || time>0" (click)="start()">INICIAR</button>
         </div>
         <div class="col12 col-md-9">
             <h1>{{step}}</h1>

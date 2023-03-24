@@ -48,6 +48,8 @@ export class TimerComponent implements OnInit {
    * Start job
    */
   async start() {
+    this.cyclesPercentages=0;
+    this.setsPercentages=0;
     this.prepare = this.timerForm.controls['prepare'].value; 
     this.work = this.timerForm.controls['work'].value;
     this.rest = this.timerForm.controls['rest'].value;
