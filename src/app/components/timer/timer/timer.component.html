@@ -1,38 +1,38 @@
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-3 card">
+        <div class="col-12 card" [hidden]="time>0">
             <h2 class="">Arma tu rutina</h2>
             <p>Ingresa los parametros de tu rutina de entrenamiento:</p>
             <form [formGroup]="timerForm">
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-hourglass-start"></mat-icon>
                     <mat-label>Preparación</mat-label>
-                    <input matInput formControlName="prepare">
+                    <input matInput formControlName="prepare" inputmode="numeric">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-dumbbell"></mat-icon>
                     <mat-label>Trabajo</mat-label>
-                    <input matInput formControlName="work">
+                    <input matInput formControlName="work" inputmode="numeric">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-hourglass-half"></mat-icon>
                     <mat-label>Descanso</mat-label>
-                    <input matInput formControlName="rest">
+                    <input matInput formControlName="rest" inputmode="numeric">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-arrows-spin"></mat-icon>
                     <mat-label>Ciclos</mat-label>
-                    <input matInput formControlName="cycles">
+                    <input matInput formControlName="cycles" inputmode="numeric">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-list-check"></mat-icon>
                     <mat-label>Sets</mat-label>
-                    <input matInput formControlName="sets">
+                    <input matInput formControlName="sets" inputmode="numeric">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-hourglass-start"></mat-icon>
                     <mat-label>Descanso entre sets</mat-label>
-                    <input matInput formControlName="restBetweenSets">
+                    <input matInput formControlName="restBetweenSets" inputmode="numeric">
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-icon matPrefix class="input-icon fa-solid fa-temperature-arrow-down"></mat-icon>
@@ -42,10 +42,9 @@
             </form>
             <button mat-flat-button color="primary" [disabled]="timerForm.invalid || time>0" (click)="start()">INICIAR</button>
         </div>
-        <div class="col12 col-md-9">
+        <div class="col-12 card" [hidden]="time==0">
             <h1>{{step}}</h1>
             <h3>{{time}}</h3>
-    
             <p>Ciclos</p>
             <mat-progress-bar mode="determinate" [value]="cyclesPercentages"></mat-progress-bar>
             <p>Sets</p>
