@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-5 card" [hidden]="time>0">
+        <div class="col-12 col-md-6 card" [hidden]="time>0">
             <h2 class="">Arma tu rutina</h2>
             <p>Ingresa los parametros de tu rutina:</p>
             <form [formGroup]="timerForm">
@@ -41,6 +41,8 @@
                 </mat-form-field>
             </form>
             <button mat-flat-button color="primary" [disabled]="timerForm.invalid || time>0" (click)="start()">INICIAR</button>
+        </div>
+        <div class="col-12 col-md-6 card timer-image" [hidden]="time>0">           
         </div>
         <div class="col-12 card" [hidden]="time==0">
             <h1>{{step}}</h1>
