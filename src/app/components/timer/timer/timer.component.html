@@ -7,55 +7,121 @@
                     <p>Ingresa los parametros de tu rutina de entrenamiento:</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-2">
-
-                </div>
-                <div class="col-8">
-                    <form [formGroup]="timerForm">
+            <form [formGroup]="timerForm">
+                <div class="row">
+                    <div class="col-2">
+    
+                    </div>
+                    <div class="col-8">
                         <mat-form-field appearance="outline">
                             <mat-icon matPrefix class="input-icon fa-solid fa-hourglass-start"></mat-icon>
                             <mat-label>Preparación</mat-label>
                             <input matInput formControlName="prepare" inputmode="numeric">
-                        </mat-form-field>
+                        </mat-form-field>    
+                    </div>
+                    <div class="col-2">
+    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+    
+                    </div>
+                    <div class="col-8">
                         <mat-form-field appearance="outline">
                             <mat-icon matPrefix class="input-icon fa-solid fa-dumbbell"></mat-icon>
                             <mat-label>Trabajo</mat-label>
                             <input matInput formControlName="work" inputmode="numeric">
-                        </mat-form-field>
+                        </mat-form-field>                          
+                    </div>
+                    <div class="col-2">
+    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+    
+                    </div>
+                    <div class="col-8">
                         <mat-form-field appearance="outline">
                             <mat-icon matPrefix class="input-icon fa-solid fa-hourglass-half"></mat-icon>
                             <mat-label>Descanso</mat-label>
                             <input matInput formControlName="rest" inputmode="numeric">
-                        </mat-form-field>
+                        </mat-form-field>                          
+                    </div>
+                    <div class="col-2">
+    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+    
+                    </div>
+                    <div class="col-8">
                         <mat-form-field appearance="outline">
                             <mat-icon matPrefix class="input-icon fa-solid fa-arrows-spin"></mat-icon>
                             <mat-label>Ciclos</mat-label>
                             <input matInput formControlName="cycles" inputmode="numeric">
-                        </mat-form-field>
+                        </mat-form-field>                          
+                    </div>
+                    <div class="col-2">
+    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+    
+                    </div>
+                    <div class="col-8">
                         <mat-form-field appearance="outline">
                             <mat-icon matPrefix class="input-icon fa-solid fa-list-check"></mat-icon>
                             <mat-label>Sets</mat-label>
                             <input matInput formControlName="sets" inputmode="numeric">
-                        </mat-form-field>
+                        </mat-form-field>                          
+                    </div>
+                    <div class="col-2">
+    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+    
+                    </div>
+                    <div class="col-8">
                         <mat-form-field appearance="outline">
                             <mat-icon matPrefix class="input-icon fa-solid fa-hourglass-start"></mat-icon>
                             <mat-label>Descanso entre sets</mat-label>
                             <input matInput formControlName="restBetweenSets" inputmode="numeric">
-                        </mat-form-field>
+                        </mat-form-field>                          
+                    </div>
+                    <div class="col-2">
+    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+    
+                    </div>
+                    <div class="col-8">
                         <mat-form-field appearance="outline">
                             <mat-icon matPrefix class="input-icon fa-solid fa-temperature-arrow-down"></mat-icon>
                             <mat-label>Descanso final</mat-label>
                             <input matInput formControlName="coolDown">
-                        </mat-form-field>
-                    </form>
-                    <button mat-flat-button color="primary" [disabled]="timerForm.invalid || time>0"
-                        (click)="start()">INICIAR</button>
+                        </mat-form-field>                          
+                    </div>
+                    <div class="col-2">
+    
+                    </div>
                 </div>
-                <div class="col-2">
-
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <button mat-flat-button color="primary" [disabled]="timerForm.invalid || time>0"
+                            (click)="start()">INICIAR</button>
+                    </div>
+                    <div class="col-2"></div>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="col-12 col-md-6 card timer-image" [hidden]="time>0">
         </div>
