@@ -1,3 +1,5 @@
+@import 'src/assets/scss/colors.scss';
+
 .col-title{
     margin: 10px 0px 20px 10px;
 }
@@ -7,4 +9,26 @@
     background-size:     cover !important;
     background-repeat:   no-repeat !important;
     background-position: top center !important;
+}
+
+.plus{
+    display: flex;
+    justify-content: right;
+    padding: 15px 5px 0px 0px;
+
+    mat-icon:hover{
+        color: $red-primary !important;
+        cursor: pointer;
+    }
+}
+
+.minus{
+    display: flex;
+    justify-content: left;
+    padding: 15px 0px 0px 5px;
+    
+    mat-icon:hover{
+        color: $red-primary !important;
+        cursor: pointer;
+    }
 }
