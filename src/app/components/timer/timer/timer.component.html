@@ -10,7 +10,9 @@
             <form [formGroup]="timerForm">
                 <div class="row">
                     <div class="col-2 plus">
-                        <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        </button>
                     </div>
                     <div class="col-8">
                         <mat-form-field appearance="outline">
@@ -20,12 +22,16 @@
                         </mat-form-field>    
                     </div>
                     <div class="col-2 minus">
-                        <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        </button>                        
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-2 plus">
-                        <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        </button>
                     </div>
                     <div class="col-8">
                         <mat-form-field appearance="outline">
@@ -35,12 +41,16 @@
                         </mat-form-field>                          
                     </div>
                     <div class="col-2 minus">
-                        <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-2 plus">
-                        <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        </button>
                     </div>
                     <div class="col-8">
                         <mat-form-field appearance="outline">
@@ -50,12 +60,16 @@
                         </mat-form-field>                          
                     </div>
                     <div class="col-2 minus">
-                        <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-2 plus">
-                        <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        </button>
                     </div>
                     <div class="col-8">
                         <mat-form-field appearance="outline">
@@ -65,12 +79,16 @@
                         </mat-form-field>                          
                     </div>
                     <div class="col-2 minus">
-                        <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-2 plus">
-                        <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        </button>
                     </div>
                     <div class="col-8">
                         <mat-form-field appearance="outline">
@@ -80,12 +98,16 @@
                         </mat-form-field>                          
                     </div>
                     <div class="col-2 minus">
-                        <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-2 plus">
-                        <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        </button>
                     </div>
                     <div class="col-8">
                         <mat-form-field appearance="outline">
@@ -95,12 +117,16 @@
                         </mat-form-field>                          
                     </div>
                     <div class="col-2 minus">
-                        <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-2 plus">
-                        <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-plus"></mat-icon>
+                        </button>
                     </div>
                     <div class="col-8">
                         <mat-form-field appearance="outline">
@@ -110,13 +136,15 @@
                         </mat-form-field>                          
                     </div>
                     <div class="col-2 minus">
-                        <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        <button mat-mini-fab color="gray">
+                            <mat-icon class="fa-solid fa-minus"></mat-icon>
+                        </button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-2"></div>
                     <div class="col-8">
-                        <button mat-flat-button color="primary" [disabled]="timerForm.invalid || time>0"
+                        <button class="btn-flat" mat-flat-button color="primary" [disabled]="timerForm.invalid || time>0"
                             (click)="start()">INICIAR</button>
                     </div>
                     <div class="col-2"></div>
