@@ -3,3 +3,10 @@ $red-primary: #f23849;
 $blue-primary: #272a31;
 
 $dark-primary: #202020;
+
+$gray: rgb(80, 79, 79);
+
+.mat-gray {
+    background-color: $gray;
+    color: #fff;
+}
